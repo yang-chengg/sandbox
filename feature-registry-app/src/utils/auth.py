@@ -1,0 +1,9 @@
+import streamlit as st
+
+def get_user_access_token():
+    if "user_access_token" not in st.session_state:
+        st.session_state.user_access_token = st.context.headers.get('x-forwarded-access-token')
+        if not st.session_state.user_access_token:
+            st.error("The app must be deployed to a Databricks workspace. Refer to the Databricks documentation for custom app deployment.")
+            st.stop()
+    return st.session_state.user_access_token

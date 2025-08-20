@@ -3,7 +3,7 @@ echo_red() {
 }
 
 # Validate the current folder
-[[ -d "./src" && -f "./src/app.yaml" ]] || { echo_red "Error: Couldn't find app.yaml. \nPlease run this script from the //feature-store/registry directory."; exit 1; }
+[[ -d "./src" && -f "./src/app.yaml" ]] || { echo_red "Error: Couldn't find app.yaml. \nPlease run this script from the //sandbox/feature-registry-app directory."; exit 1; }
 
 # Users: Make sure you have a ./deploy_config.sh file that sets the necessary variables for this script.
 [ -f "./deploy_config.sh" ] || {

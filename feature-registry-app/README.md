@@ -45,7 +45,7 @@ The application is built with:
 
 2. Update `deploy_config.sh` with the config for your environment
 
-3. Ensure the Databricks CLI is installed and configured on your machine. The "DEFAULT" profile should point to the destination workspace where the app will be deployed. You can find instructions [here](https://docs.databricks.com/dev-tools/cli/index.html)
+3. Ensure the Databricks CLI is installed and configured on your machine. The "DEFAULT" profile should point to the destination workspace where the app will be deployed. You can find instructions here for [AWS](https://docs.databricks.com/dev-tools/cli/index.html) / [Azure](https://learn.microsoft.com/en-us/azure/databricks/dev-tools/cli/)
 
 ### Deploy the App
 1. Navigate to the app directory
@@ -56,7 +56,7 @@ The application is built with:
 
 ### Catalog Allow-Listing
 
-The Feature Registry App supports restricting which Unity Catalog catalogs users can explore for features. This is useful for:
+By default, the Feature Registry App will show all the catalogs to which the user has read access. You can restrict which Unity Catalog catalogs users can explore for features. This is useful for:
 - Limiting feature discovery to production-ready catalogs
 - Ensuring data scientists only access approved feature sets
 - Organizing features by teams or projects
